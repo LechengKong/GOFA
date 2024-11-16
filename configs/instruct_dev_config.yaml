@@ -1,12 +1,12 @@
 run_mode: "ft"
 load_model: True
 data_root_path: "/storage1/yinjie.tang/Active/feng.jiarui/TAGDataset"
-load_dir: "/storage1/yinjie.tang/Active/feng.jiarui/GOFA/cache_data/best_ckpt_3.pth"
-#load_dir: "./saved_exp/2024-09-26_15:07:16.329065_596/best_ckpt.pth"
+#load_dir: "/storage1/yinjie.tang/Active/feng.jiarui/GOFA/cache_data/best_ckpt_3.pth"
+load_dir: "/project/tantra/jerry.kong/repo/GOFA/saved_exp/2024-09-25_16:50:05.461317_145/best_ckpt.pth"
 grad_acc_step: 32
 last_epochs: 0
-num_epochs: 1
-mode: autoencoder
+num_epochs: 0
+mode: autoencodergen
 batch_size: 1
 lr: 0.0001
 l2: 0.1
@@ -16,43 +16,43 @@ llm_max_length: 256
 val_interval: 4000
 
 train_task_names:
-  - mag240m
-  - wikikg90m
-  - arxiv_link
-  - arxiv
+#  - mag240m
+#  - wikikg90m
+#  - arxiv_link
+#  - arxiv
   - pubmed_link
 
 sample_size_per_task:
-  - 100000
-  - 100000
-  - 50000
-  - 200000
+#  - 100000
+#  - 100000
+#  - 50000
+#  - 200000
   - 30000
 hops:
-  - 3
-  - 3
-  - 3
-  - 3
+#  - 3
+#  - 3
+#  - 3
+#  - 3
   - 3
 
 train_max_nodes_per_hops:
-  - 5
-  - 5
-  - 5
-  - 5
+#  - 5
+#  - 5
+#  - 5
+#  - 5
   - 5
 ways: 10
 instructs: True
 
 eval_task_names:
   - cora_node
-  - cora_link
-  - wikics
-  - products
-  - expla_graph
-  - fb15k237
-  - scene_graph
-inf_sample_size_per_task: 500
+#  - cora_link
+#  - wikics
+#  - products
+#  - expla_graph
+#  - fb15k237
+#  - scene_graph
+inf_sample_size_per_task: 1.0
 inf_hops:
   - 3
   - 2
