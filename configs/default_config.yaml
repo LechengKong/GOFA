@@ -1,7 +1,7 @@
 root_path: "./"  # saved pth ckpt and wandb logging
 data_root_path: "./TAGDataset"  # data directory
 ckpt_save_path:   # path to save deepspeed ckpt
-num_layers: 6    # number of gnn layers
+num_layers: 5    # number of gnn layers
 gnn_type: "index"
 fuse_type: interleave    # determines how GNN is fused into the LLM choose from {interleave, parallel} parallel is under development.
 lr: 0.0003

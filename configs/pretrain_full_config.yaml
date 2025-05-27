@@ -1,0 +1,97 @@
+run_mode: ft
+data_root_path: "./TAGDataset"
+last_epochs: 0
+num_epochs: 0
+grad_acc_step: 32
+l2: 0.0
+lr: 0.00005
+mode: "generate"
+
+dec_lora: True
+eval_task_names:
+- cora_node
+- cora_link
+- wikics
+- products
+- expla_graph
+- fb15k237
+- scene_graph
+exp_name: gofa
+hops:
+- 3
+- 3
+- 3
+- 3
+inf_hops:
+- 3
+- 3
+- 3
+- 3
+- -1
+- 3
+- -1
+inf_instructs:
+- True
+- True
+- True
+- True
+- True
+- True
+- True
+inf_max_nodes_per_hops:
+- 10
+- 10
+- 10
+- 10
+- -1
+- 10
+- -1
+inf_sample_size_per_task:
+- 100
+- 100
+- 100
+- 100
+- 100
+- 100
+- 100
+inf_selections:
+- True
+- True
+- True
+- True
+- True
+- True
+- True
+inf_ways:
+- 7
+- 3
+- 10
+- 10
+- 2
+- 10
+- -1
+instructs: True
+llm_max_length: 256
+load_dir: "tmp_good_inst.pth"
+load_model: True
+max_nodes_per_hop: 5
+
+sample_size_per_task:
+- 80000
+- 30000
+- 10000
+- 6000
+selections: True
+train_max_nodes_per_hops:
+- 5
+- 5
+- 5
+- 5
+train_sample_size: -1
+train_task_names:
+- arxiv
+- arxiv_link
+- pubmed_node
+- pubmed_link
+ways: 10
+val_interval: 2000

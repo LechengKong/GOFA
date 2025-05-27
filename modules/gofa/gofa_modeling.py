@@ -35,9 +35,9 @@ class GOFAMistralModel(MistralModel):
         super().__init__(config)
         self.gofa_config = gofa_config
 
-        # self.g_layers = nn.ModuleList([GOFAGatedDecoderLayer(gofa_config, layer_idx=i) for i in range(gofa_config.num_layers)])
-        self.g_layers = nn.ModuleList(
-            [GOFAGNNConv(gofa_config) for i in range(gofa_config.num_layers)])
+        self.g_layers = nn.ModuleList([GOFAGatedDecoderLayer(gofa_config, layer_idx=i) for i in range(gofa_config.num_layers)])
+        # self.g_layers = nn.ModuleList(
+        #     [GOFAGNNConv(gofa_config) for i in range(gofa_config.num_layers)])
 
         self.post_init()
 

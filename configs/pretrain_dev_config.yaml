@@ -2,7 +2,7 @@ ckpt_path:
 ckpt_save_path: "./gofa_deepspeed_ckpt/"
 last_epochs: 0
 num_epochs: 1
-grad_acc_step: 64
+grad_acc_step: 32
 l2: 0.1
 lr: 0.0003
 mode: "decode"
@@ -12,5 +12,5 @@ save_model:
   monitor: False
   time: 10
   epochs:
-  top_k: -1
+  top_k: 0
   last: True

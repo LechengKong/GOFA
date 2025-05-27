@@ -193,7 +193,7 @@ class MistralICAE(torch.nn.Module):
     def create_dec_lora_config(self):
         lora_config = LoraConfig(
 
-            r=32,
+            r=512,
 
             lora_alpha=32,
 
